@@ -109,7 +109,7 @@ class RegisterCraftsmanState extends State<RegisterCraftsman> {
                       onPressed: _showMultiSelect,
                     ),
                     ElevatedButton(
-                      child: const Text('Seleccionar Ubicacion'),
+                      child: Icon(Icons.add_location),
                       onPressed: _showMap,
                     ),
                     Padding(

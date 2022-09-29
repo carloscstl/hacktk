@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:hackatec/models/artesano_model.dart';
 import 'package:hackatec/screens/loading_screen.dart';
+import 'package:hackatec/styles.dart';
 
 class CraftsmanScreen extends StatelessWidget {
   CraftsmanScreen({super.key});
@@ -10,11 +11,35 @@ class CraftsmanScreen extends StatelessWidget {
     final size = MediaQuery.of(context).size;
     print(context);
     return Scaffold(
+      floatingActionButton: FloatingActionButton(
+        child: Icon(Icons.add),
+        onPressed: () {
+          Navigator.pushNamed(context, 'registerCraftsman');
+        },
+      ),
       body: SafeArea(
           child: Column(
         children: [
           Container(
-            height: size.height * .25,
+            color: ORANGE_MAIN,
+            width: double.infinity,
+            height: size.height * .15,
+            child: Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: [
+                Padding(
+                  padding: const EdgeInsets.symmetric(horizontal: 15.0),
+                  child: Text(
+                    "Artesanos",
+                    style: TextStyle(
+                        color: Colors.white,
+                        fontSize: 52,
+                        fontWeight: FontWeight.bold),
+                  ),
+                ),
+              ],
+            ),
           ),
           _ListArtesanos(
             artesanos: [
@@ -74,7 +99,8 @@ class _ListArtesanos extends StatelessWidget {
   @override
   Widget build(BuildContext context) => artesanos!.isNotEmpty
       ? Expanded(
-          child: Padding(
+          child: Container(
+            color: ORANGE_MAIN,
             padding: const EdgeInsets.symmetric(horizontal: 10),
             child: ListView.builder(
               itemCount: artesanos?.length,
@@ -136,7 +162,9 @@ class _ArtesanoItem extends StatelessWidget {
                       Text(
                         artesano.name + " " + artesano.lastName,
                         style: TextStyle(
-                            fontSize: 20, fontWeight: FontWeight.bold),
+                            color: Colors.white,
+                            fontSize: 20,
+                            fontWeight: FontWeight.bold),
                         overflow: TextOverflow.ellipsis,
                         textAlign: TextAlign.justify,
                         maxLines: 3,
@@ -145,7 +173,7 @@ class _ArtesanoItem extends StatelessWidget {
                         "ARTESANO",
                         style: TextStyle(
                           fontSize: 14,
-                          color: Colors.black54,
+                          color: Color.fromARGB(255, 255, 204, 136),
                         ),
                         overflow: TextOverflow.ellipsis,
                         textAlign: TextAlign.justify,
@@ -158,7 +186,7 @@ class _ArtesanoItem extends StatelessWidget {
                         artesano.gender,
                         style: TextStyle(
                           fontSize: 14,
-                          color: Colors.black54,
+                          color: Colors.white,
                         ),
                         overflow: TextOverflow.ellipsis,
                         textAlign: TextAlign.justify,
@@ -172,7 +200,7 @@ class _ArtesanoItem extends StatelessWidget {
   }
 
   BoxDecoration _cardDecoration() => BoxDecoration(
-          color: Colors.white,
+          color: Colors.orangeAccent,
           borderRadius: BorderRadius.circular(10),
           boxShadow: [
             BoxShadow(

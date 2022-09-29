@@ -8,6 +8,7 @@ import 'package:provider/provider.dart';
 
 import '../helpers/reportTile.dart';
 import '../styles.dart';
+import 'vewReport/view_report.dart';
 
 class HomeScreenBody extends StatelessWidget {
   const HomeScreenBody({Key? key}) : super(key: key);
@@ -164,12 +165,12 @@ class HomeScreenBody extends StatelessWidget {
         child: SizedBox());
   }
 
-  // void viewReport(BuildContext context, Service _srv) {
-  //   Navigator.push(
-  //     context,
-  //     MaterialPageRoute(builder: (context) => ViewReport(_srv)),
-  //   );
-  // }
+  void viewReport(BuildContext context, Install _srv) {
+    Navigator.push(
+      context,
+      MaterialPageRoute(builder: (context) => ViewReport(_srv)),
+    );
+  }
 
   Widget buildListView(BuildContext context, List<Install> services) {
     return ListView.builder(
@@ -182,9 +183,10 @@ class HomeScreenBody extends StatelessWidget {
         String _time = _service.fecha_inicial; //"Vie. 28 Feb, 2:35 pm";
 
         return GestureDetector(
-            child: ReportTile(_title!, _cat!, _time, _service.estado),
-            onTap: () => {} //viewReport(context, _service),
-            );
+            child: ReportTile(_title, _cat, _time, _service.estado),
+            onTap: () => {
+                  viewReport(context, _service),
+                });
       },
     );
   }

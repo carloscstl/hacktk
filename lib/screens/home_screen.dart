@@ -72,17 +72,19 @@ class HomeScreen extends StatelessWidget {
           crossAxisAlignment: CrossAxisAlignment.center,
           children: [
             Container(
-              padding: EdgeInsets.symmetric(horizontal: size.width * .1),
+              padding: EdgeInsets.symmetric(horizontal: size.width * .07),
               //   color: Colors.red,
               height: size.height * .13,
               width: size.width,
               child: Row(
                 children: const [
                   CircleAvatar(
-                    radius: 40.0,
+                    radius: 30.0,
+                    backgroundImage: NetworkImage(
+                        'https://scontent.fcjs3-2.fna.fbcdn.net/v/t1.6435-9/153794417_3851804758240064_1302252674568576840_n.jpg?_nc_cat=103&ccb=1-7&_nc_sid=09cbfe&_nc_ohc=lEVC6nMwN9EAX9J0PdM&_nc_ht=scontent.fcjs3-2.fna&oh=00_AT9Fvfxe-dErBxpD-XHlS_OzYCpIklfxcmeIn0joqELhGw&oe=6359E8D2'),
                   ),
                   SizedBox(
-                    width: 30,
+                    width: 15,
                   ),
                   Text('Fernando Hernandez',
                       style:

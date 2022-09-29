@@ -5,6 +5,8 @@ import 'package:hackatec/services/auth_service.dart';
 import 'package:hackatec/services/socket_provider.dart';
 import 'package:provider/provider.dart';
 
+import 'services/maps_service.dart';
+
 void main() => runApp(const MyApp());
 
 class MyApp extends StatelessWidget {
@@ -17,6 +19,7 @@ class MyApp extends StatelessWidget {
         ChangeNotifierProvider(create: (_) => AuthService()),
         ChangeNotifierProvider(create: (_) => SocketProvider()),
         ChangeNotifierProvider(create: (_) => ChatProvider()),
+        ChangeNotifierProvider(create: (_) => MapProvider()),
       ],
       child: MaterialApp(
         debugShowCheckedModeBanner: false,
