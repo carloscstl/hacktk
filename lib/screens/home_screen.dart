@@ -142,8 +142,8 @@ class HomeScreen extends StatelessWidget {
                       Navigator.pushNamed(context, items[index].route);
                     },
                     child: Container(
-                      height: size.height * .18,
-                      width: size.width * .4,
+                      height: size.height * 0.18,
+                      width: size.width * 0.4,
                       margin: const EdgeInsets.symmetric(horizontal: 3),
                       decoration: BoxDecoration(
                         borderRadius: BorderRadius.circular(10),
