@@ -81,7 +81,7 @@ class HomeScreen extends StatelessWidget {
                   CircleAvatar(
                     radius: 30.0,
                     backgroundImage: NetworkImage(
-                        'https://scontent.fcjs3-2.fna.fbcdn.net/v/t1.6435-9/153794417_3851804758240064_1302252674568576840_n.jpg?_nc_cat=103&ccb=1-7&_nc_sid=09cbfe&_nc_ohc=lEVC6nMwN9EAX9J0PdM&_nc_ht=scontent.fcjs3-2.fna&oh=00_AT9Fvfxe-dErBxpD-XHlS_OzYCpIklfxcmeIn0joqELhGw&oe=6359E8D2'),
+                        'https://img.freepik.com/free-photo/half-profile-image-handsome-young-caucasian-man-with-good-skin-brown-eyes-black-stylish-hair-stubble-posing-isolated-against-blank-wall-looking-front-him-smiling_343059-4560.jpg?w=2000'),
                   ),
                   SizedBox(
                     width: 15,
@@ -175,7 +175,7 @@ class HomeScreen extends StatelessWidget {
       ),
       floatingActionButton: FloatingActionButton(
         onPressed: () {
-          Navigator.pushNamed(context, 'chat-detail');
+          Navigator.pushNamed(context, 'videochat');
         },
         child: const Icon(Icons.chat),
       ),

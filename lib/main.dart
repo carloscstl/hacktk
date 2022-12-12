@@ -24,7 +24,7 @@ class MyApp extends StatelessWidget {
       child: MaterialApp(
         debugShowCheckedModeBanner: false,
         title: 'App',
-        initialRoute: 'loading',
+        initialRoute: 'home',
         routes: appRoutes,
       ),
     );

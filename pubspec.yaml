@@ -46,6 +46,7 @@ dependencies:
   geolocator:
   animate_do:
   numberpicker: ^2.1.1
+  jitsi_meet: ^4.0.0
 
 dev_dependencies:
   flutter_test:

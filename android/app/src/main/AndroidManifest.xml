@@ -1,10 +1,10 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.example.hackatec">
-
-     
-      <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    package="com.example.hackatec"
+    xmlns:tools="http://schemas.android.com/tools">
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
     <uses-permission android:name="android.permission.INTERNET"/>
    <application
+        tools:replace="android:label"
         android:usesCleartextTraffic="true"
         android:label="hackatec"
         android:name="${applicationName}"

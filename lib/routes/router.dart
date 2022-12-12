@@ -16,4 +16,5 @@ final Map<String, Widget Function(BuildContext)> appRoutes = {
   'craftsmen': (context) => CraftsmanScreen(),
   'courses': (context) => const CoursesScreen(),
   'install': (context) => InstallScreen(),
+  'videochat': (context) => Meeting(),
 };
